@@ -1,0 +1,19 @@
+﻿
+        .boxLocation{
+            height:530px;
+            width:60%;
+            margin-top:6%;
+            left:20%;
+        }
+        .anslbl{
+            font-size: 14px;
+            font-weight: 600;
+            color:maroon;
+            text-transform:uppercase;
+        }
+        input{
+            width: 15px ;
+            height: 12px;
+            margin-right: 10px;
+        }
+    

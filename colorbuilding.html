@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Color Building</title>
+    <link rel="stylesheet" href="homecss.css">
+    <link rel="stylesheet" href="commoncss.css">
+
+    <link href="colorbuilding.css" rel="stylesheet" />
+    <script type="text/javascript">
+        function changeBackground () {
+            var r = parseInt(document.getElementById('sliderRed').value);
+            var g = parseInt(document.getElementById('sliderGreen').value);
+            var b = parseInt(document.getElementById('sliderBlue').value);
+            var o = parseFloat(document.getElementById('sliderAlpha').value);
+
+            var rHex = (r < 16) ? "0" + r.toString(16) : r.toString(16);
+            var gHex = (g < 16) ? "0" + g.toString(16) : g.toString(16);
+            var bHex = (b < 16) ? "0" + b.toString(16) : b.toString(16);
+
+            var hexCode = '#' + rHex + gHex + bHex;
+            document.getElementById('sideDiv').style.backgroundColor= hexCode;
+            document.getElementById('sideDiv').style.opacity = o;
+        }
+    </script>
+</head>
+<body>
+<div>
+    <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="index.html">Project 2</a></li>
+        <li><a href="aboutme.html">About</a></li>
+        <li><a href="calculator.html">Calculator</a></li>
+        <li><a href="shopping.html">Shopping</a></li>
+        <li class="dropdown">
+            <a href="#" class="dropbtn">Project 4</a>
+            <div class="dropdown-content">
+                <a href="signup.html">Sign Up</a>
+                <a href="search.html">Search</a>
+                <a href="questionnaire.html">Questionnaire</a>
+                <a href="login.html">Login</a>
+                <a href="colorbuilding.html">Color Building</a>
+                <a href="billing.html">Shipping</a>
+                <a href="scheduling.html">Schedule</a>
+                <a href="creditcard.html">Credit / Debit Card</a>
+            </div>
+        </li>
+        
+    </ul>
+</div>
+<div class="box boxLocation">
+    <div class="upper"> Color Building</div>
+    <div class="lower">
+            <p>
+            <label>Red</label><br>
+            <input id="sliderRed" type="range" min="0" max="255" step="5" value="0" class="inputRed" onchange="changeBackground()">
+            </p>
+            <p>
+            <label>Green</label><br>
+            <input id="sliderGreen" type="range" min="0" max="255" step="5" value="0" class="inputGreen" onchange="changeBackground()"><br>
+            </p>
+            <p>
+            <label>Blue</label><br>
+
+            <input id="sliderBlue" type="range" min="0" max="255" step="5" value="0" class="inputBlue" onchange="changeBackground()"><br>
+            </p>
+            <p>
+            <label>Opacity</label><br>
+            <input id="sliderAlpha" type="range" min="0" max="1" step="0.01" value="1" class="inputAlpha" onchange="changeBackground()"><br>
+            </p>
+
+    </div>
+    <div id="sideDiv" class="side">
+
+    </div>
+</div>
+</body>
+</html>

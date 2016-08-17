@@ -1,0 +1,215 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Questionnaire</title>
+    <link rel="stylesheet" href="homecss.css">
+    <link rel="stylesheet" href="commoncss.css">
+
+    <link href="questionnaire.css" rel="stylesheet" />
+    <script type="text/javascript" src="validator.js" ></script>
+</head>
+<body>
+<div>
+    <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="index.html">Project 2</a></li>
+        <li><a href="aboutme.html">About</a></li>
+        <li><a href="calculator.html">Calculator</a></li>
+        <li><a href="shopping.html">Shopping</a></li>
+        <li class="dropdown">
+            <a href="#" class="dropbtn">Project 4</a>
+            <div class="dropdown-content">
+                <a href="signup.html">Sign Up</a>
+                <a href="search.html">Search</a>
+                <a href="questionnaire.html">Questionnaire</a>
+                <a href="login.html">Login</a>
+                <a href="colorbuilding.html">Color Building</a>
+                <a href="billing.html">Shipping</a>
+                <a href="scheduling.html">Schedule</a>
+                <a href="creditcard.html">Credit / Debit Card</a>
+            </div>
+        </li>
+       
+    </ul>
+</div>
+<div class="box boxLocation">
+    <div class="upper"> Questionnaire</div>
+    <div class="lower">
+
+        <p>
+            <label style="font-size: 21px">1.Which of the following languages is more suited to a structured program?</label>
+            <br>
+            <input type="radio" value="PL1" name="gr1">  <label class="anslbl">Pl1</label>
+            <input type="radio" value="FORTRAN" name="gr1"> <label class="anslbl">Fortran</label>
+            <input type="radio" value="BASIC" name="gr1"> <label class="anslbl">Basic</label>
+            <input type="radio" value="PASCAL" name="gr1"> <label class="anslbl">Pascal</label>
+            <input type="radio" VALUE="OTHER" name="gr1" id="otherFirst" > <label class="anslbl" >Other</label>
+            <input type="text" class="inputText" style="width: 152px;height: 25px;margin-top: 5px" id="inputFirst" disabled>
+        </p>
+        <p>
+            <label style="font-size: 21px">2. A computer assisted method for the recording and analyzing of existing or hypothetical systems is?</label>
+            <br>
+            <input type="radio" value="PL1" name="gr2"> <label class="anslbl">Data transmission</label>
+            <input type="radio" value="FORTRAN" name="gr2"> <label class="anslbl">Data flow</label>
+            <input type="radio" value="BASIC" name="gr2"> <label class="anslbl">Data capture</label>
+            <input type="radio" value="PASCAL" name="gr2"> <label class="anslbl">Data processing</label>
+            <input type="radio" VALUE="OTHER" name="gr2" id="otherSecond"> <label class="anslbl">Other</label>
+            <input type="text" class="inputText" style="width: 152px;height: 25px;margin-top: 5px" id="inputSecond" disabled>
+        </p>
+        <p>
+            <label style="font-size: 21px">3. The brain of any computer system is?</label>
+            <br>
+            <input type="radio" value="PL1" name="gr3"> <label class="anslbl">Alu</label>
+            <input type="radio" value="FORTRAN" name="gr3"> <label class="anslbl">Memory</label>
+            <input type="radio" value="BASIC" name="gr3"> <label class="anslbl">Cpu</label>
+            <input type="radio" value="PASCAL" name="gr3"> <label class="anslbl">Control Unit</label>
+            <input type="radio" VALUE="OTHER" name="gr3" id="otherThird"> <label class="anslbl">Other</label>
+            <input type="text" class="inputText" style="width: 152px;height: 25px;margin-top: 5px" id="inputThird" disabled>
+        </p>
+        <p>
+            <label style="font-size: 21px">4. What difference does the 5th generation computer have from other generation computers?</label>
+            <br>
+            <input type="radio" value="PL1" name="gr4"> <label class="anslbl">Technological advancement</label>
+            <input type="radio" value="FORTRAN" name="gr4"> <label class="anslbl">Scientific code</label>
+            <input type="radio" value="BASIC" name="gr4"> <label class="anslbl">Object Oriented Programming</label>
+            <input type="radio" value="PASCAL" name="gr4"> <label class="anslbl">All of the above</label>
+            <input type="radio" VALUE="OTHER" name="gr4" id="otherFourth"> <label class="anslbl">Other</label>
+            <input type="text" class="inputText" style="width: 152px;height: 25px;margin-top: 5px" id="inputFourth" disabled>
+        </p>
+       
+        <p>
+            <input type="button" class="button" value="Submit" id="submitButton">
+        </p>
+
+    </div>
+    <script type="text/javascript">
+        document.getElementById("submitButton").addEventListener("click", validationFunction,false);
+        var isCheckedFirst,isCheckedSecond,isCheckedThird,isCheckedFourth,isCheckedFifth;
+
+        var radiosFirst = document.getElementsByName("gr1");
+        for(var i=0;i<radiosFirst.length;i++){
+            radiosFirst[i].addEventListener("click", validationFirst,false);
+        }
+        var iFirst = document.getElementById("inputFirst");
+        function validationFirst(){
+            isCheckedFirst = document.getElementById("otherFirst").checked;
+            if(isCheckedFirst){
+                iFirst.disabled = false;
+            }
+            else{
+                iFirst.disabled = true;
+                iFirst.value='';
+            }
+        }
+
+        var radiosSecond = document.getElementsByName("gr2");
+        for(var i=0;i<radiosSecond.length;i++){
+            radiosSecond[i].addEventListener("click", validationSecond,false);
+        }
+        var iSecond = document.getElementById("inputSecond");
+        function validationSecond(){
+             isCheckedSecond = document.getElementById("otherSecond").checked;
+            if(isCheckedSecond){
+                iSecond.disabled = false;
+            }
+            else{
+                iSecond.disabled = true;
+                iSecond.value='';
+            }
+        }
+
+        var radiosThird = document.getElementsByName("gr3");
+        for(var i=0;i<radiosThird.length;i++){
+            radiosThird[i].addEventListener("click", validationThird,false);
+        }
+        var iThird= document.getElementById("inputThird");
+        function validationThird(){
+            isCheckedThird = document.getElementById("otherThird").checked;
+            if(isCheckedThird){
+                iThird.disabled = false;
+            }
+            else{
+                iThird.value='';
+                iThird.disabled = true;
+            }
+        }
+
+        var radiosFourth = document.getElementsByName("gr4");
+        for(var i=0;i<radiosFourth.length;i++){
+            radiosFourth[i].addEventListener("click", validationFourth,false);
+        }
+        var iFourth= document.getElementById("inputFourth");
+        function validationFourth(){
+            isCheckedFourth = document.getElementById("otherFourth").checked;
+            if(isCheckedFourth){
+                iFourth.disabled = false;
+            }
+            else{
+                iFourth.value='';
+                iFourth.disabled = true;
+            }
+        }
+
+        var radiosFifth = document.getElementsByName("gr5");
+        for(var i=0;i<radiosFifth.length;i++){
+            radiosFifth[i].addEventListener("click", validationFifth,false);
+        }
+        var iFifth= document.getElementById("inputFifth");
+        function validationFifth(){
+            isCheckedFifth = document.getElementById("otherFifth").checked;
+            if(isCheckedFifth){
+                iFifth.disabled = false;
+            }
+            else{
+                iFifth.value='';
+                iFifth.disabled = true;
+            }
+        }
+
+        function validationFunction(){
+            if(isCheckedFirst){
+                if(!isEmpty(iFirst.value)){
+                    iFirst.className = 'invalidText';
+                }
+                else{
+                    iFirst.className = 'inputText';
+                }
+            }
+            if(isCheckedSecond){
+                if(!isEmpty(iSecond.value)){
+                    iSecond.className = 'invalidText';
+                }
+                else{
+                    iSecond.className = 'inputText';
+                }
+            }
+            if(isCheckedThird){
+                if(!isEmpty(iThird.value)){
+                    iThird.className = 'invalidText';
+                }
+                else{
+                    iThird.className = 'inputText';
+                }
+            }
+            if(isCheckedFourth){
+                if(!isEmpty(iFourth.value)){
+                    iFourth.className = 'invalidText';
+                }
+                else{
+                    iFourth.className = 'inputText';
+                }
+            }
+            if(isCheckedFifth){
+                if(!isEmpty(iFifth.value)){
+                    iFifth.className = 'invalidText';
+                }
+                else{
+                    iFifth.className = 'inputText';
+                }
+            }
+        }
+    </script>
+</div>
+</body>
+</html>

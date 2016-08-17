@@ -1,0 +1,24 @@
+﻿
+        .boxLocation{
+            height:610px;
+            width:50%;
+            margin-top:3%;
+            left:30%;
+        }
+        #parent {
+            display: flex;
+            margin-top: 20px;
+        }
+        #shipping {
+            width: 48%;
+            border: 1px solid black;
+            margin-right: 20px;
+            /* Just so it's visible */
+        }
+        #billing {
+            flex: 1;
+            border: 1px solid black;
+            margin-right: 10px;
+            /* Just so it's visible */
+        }
+    

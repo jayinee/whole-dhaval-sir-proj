@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="homecss.css">
+    <link rel="stylesheet" href="commoncss.css">
+    <link rel="stylesheet" href="signupcss.css" type="text/css">
+    <script type="text/javascript" src="validator.js"></script>
+</head>
+<body>
+<div>
+    <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="index.html">Project 2</a></li>
+        <li><a href="aboutme.html">About</a></li>
+        <li><a href="calculator.html">Calculator</a></li>
+        <li><a href="shopping.html">Shopping</a></li>
+        <li class="dropdown">
+            <a href="#" class="dropbtn">Project 4</a>
+            <div class="dropdown-content">
+                <a href="signup.html">Sign Up</a>
+                <a href="search.html">Search</a>
+                <a href="questionnaire.html">Questionnaire</a>
+                <a href="login.html">Login</a>
+                <a href="colorbuilding.html">Color Building</a>
+                <a href="billing.html">Shipping</a>
+                <a href="scheduling.html">Schedule</a>
+                <a href="creditcard.html">Credit / Debit Card</a>
+            </div>
+        </li>
+       
+    </ul>
+</div>
+<div class="box boxLocation">
+    <div class="upper"> Create your account</div>
+    <div class="lower">
+        <p>
+            <label>First Name</label><label style="color: red">&nbsp*</label>
+            <input type="text" class="inputText"  autofocus style="left:2px; height:35px;margin-top: 5px;" id="inputFn"><br>
+
+        </p>
+        <p>
+
+            <label>Last Name</label><label style="color: red">&nbsp*</label>
+            <input type="text" class="inputText" style="left:2px; height:35px;margin-top: 5px;" id="inputLn">
+
+        </p>
+        <p>
+            <label>Email</label><label style="color: red">&nbsp*</label>
+            <input type="email" class="inputText" style="left:2px; height:35px;margin-top: 5px;" id="inputEm">
+        </p>
+        <p>
+            <label>Birth Date (dd-mm-yyyy)</label><label style="color: red">&nbsp*</label>
+            <input type="text" class="inputText" style="left:2px; height:35px;margin-top: 5px;" id="inputDt">
+        </p>
+        <p>
+            <label>Password</label><label style="color: red">&nbsp*</label>
+            <label class="lbl">Confirm Password</label><label style="color: red">&nbsp*</label>
+            <input type="password" class="inputText pwd1" style="left:2px; height:35px;margin-top: 5px;" id="inputPw">
+            <input type="password" class="inputText pwd1 pwd2" style="left:2px; height:35px;margin-top: 5px;" id="inputPwc">
+        </p>
+        <p>
+            <input type="checkbox" class="checkbox" /> <label>I accept terms & conditions.</label>
+
+            <input type="button" class="button" value="Sign Up" style="margin-left: 2em;" id="submitButton">
+        </p>
+    </div>
+    <script type="text/javascript">
+        document.getElementById("submitButton").addEventListener("click", validationFunction,false);
+        var inFn = document.getElementById("inputFn");
+        var inLn = document.getElementById("inputLn");
+        var inEm = document.getElementById("inputEm");
+        var inDt = document.getElementById("inputDt");
+        var inPwd = document.getElementById("inputPw");
+        var inPwdc = document.getElementById("inputPwc");
+        function validationFunction(){
+            if(!isName(inFn.value)){
+                inFn.className = "invalidText";
+            }
+            else{
+                inFn.className = "inputText";
+            }
+            if(!isName(inLn.value)){
+                inLn.className = "invalidText";
+            }
+            else{
+                inLn.className = "inputText";
+            }
+            if(!isEmailAddress(inEm.value)){
+                inEm.className = "invalidText";
+            }
+            else{
+                inEm.className = "inputText";
+            }
+            if(!isDate(inDt.value))
+            {
+                inDt.className = 'invalidText';
+            }
+            else{
+                inDt.className = 'inputText';
+            }
+            if(!isPassword(inPwd.value)){
+                inPwd.className = "invalidText pwd1";
+            }
+            else{
+                inPwd.className = "inputText pwd1";
+            }
+            if(!isPassword(inPwdc.value)){
+                inPwdc.className = "invalidText pwd1 pwd2";
+            }
+            else{
+                inPwdc.className = "inputText pwd1 pwd2";
+            }
+            if(inPwd.value.length > 0){
+                if(inPwd.value == inPwdc.value){
+                    inPwd.className = "inputText pwd1";
+                    inPwdc.className = "inputText pwd1 pwd2";
+                }
+                else{
+                    alert("Password & confirm password must be same");
+                    inPwd.className = "invalidText pwd1";
+                    inPwdc.className = "invalidText pwd1 pwd2";
+                }
+            }
+
+        }
+    </script>
+</div>
+</body>
+</html>

@@ -1,0 +1,139 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Credit / Debit Card</title>
+    <link rel="stylesheet" href="homecss.css">
+    <link rel="stylesheet" href="commoncss.css">
+    <link rel="stylesheet" href="signupcss.css" type="text/css">
+    <script type="text/javascript" src="validator.js" ></script>
+</head>
+<body>
+<div>
+    <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="index.html">Project 2</a></li>
+        <li><a href="aboutme.html">About</a></li>
+        <li><a href="calculator.html">Calculator</a></li>
+        <li><a href="shopping.html">Shopping</a></li>
+        <li class="dropdown">
+            <a href="#" class="dropbtn">Project 4</a>
+            <div class="dropdown-content">
+                <a href="signup.html">Sign Up</a>
+                <a href="search.html">Search</a>
+                <a href="questionnaire.html">Questionnaire</a>
+                <a href="login.html">Login</a>
+                <a href="colorbuilding.html">Color Building</a>
+                <a href="billing.html">Shipping</a>
+                <a href="scheduling.html">Schedule</a>
+                <a href="creditcard.html">Credit / Debit Card</a>
+            </div>
+        </li>
+       
+    </ul>
+</div>
+<div class="box boxLocation" style="height: 365px;margin-top:12%;left:40%;width: 390px">
+    <div class="upper"> Credit / Debit Card</div>
+    <div class="lower">
+        <p>
+            <label>Card holder name</label><label style="color: red">&nbsp*</label>
+            <input type="text" class="inputText" style="left:2px; height:35px;margin-top: 5px;" autofocus id="inputCardHolder">
+        </p>
+        <p>
+            <label>Card number</label><label style="color: red">&nbsp*</label>
+            <label style="margin-left:9.2em;">CSV code</label><label style="color: red">&nbsp*</label>
+            <input type="text" class="inputText" style="left:2px; height:35px;margin-top: 5px;width: 215px" pattern="/^([0-9]{4}(\-){3}[0-4]{4}$/" id="inputCardNo" >
+            <input type="password" class="inputText" style="left:2px; height:35px;margin-top: 5px; width: 85px;margin-left: 1em" id="inputCsv">
+        </p>
+        <p>
+            <label>Expiry Month</label><label style="color: red">&nbsp*</label>
+            <label style="margin-left:5em;">Expiry Year</label><label style="color: red">&nbsp*</label>
+            <select class="inputText" style="left:2px; height:35px;margin-top: 5px;width: 150px" id="inputMonth">
+
+                <option>--Select Month--</option>
+                <option>January</option>
+                <option>February</option>
+                <option>March</option>
+                <option>April</option>
+                <option>May</option>
+                <option>June</option>
+                <option>July</option>
+                <option>August</option>
+                <option>September</option>
+                <option>October</option>
+                <option>November</option>
+                <option>December</option>
+            </select>
+            <select class="inputText" style="left:2px; height:35px;margin-top: 5px;width: 150px;margin-left: 1.6em" id="inputYear">
+
+                <option>--Select Year--</option>
+                <option>2016</option>
+                <option>2017</option>
+                <option>2018</option>
+                <option>2019</option>
+                <option>2020</option>
+                <option>2021</option>
+                <option>2022</option>
+                <option>2023</option>
+                <option>2024</option>
+                <option>2025</option>
+                <option>2026</option>
+                <option>2027</option>
+                <option>2028</option>
+                <option>2029</option>
+                <option>2030</option>
+            </select>
+        </p>
+        <p>
+            <input type="button" class="button" value="Submit" style="margin-left: 15.5em;" id="submitButton">
+        </p>
+    </div>
+    <script type="text/javascript">
+        document.getElementById("submitButton").addEventListener("click", validationFunction,false);
+        var chn = document.getElementById("inputCardHolder");
+        var cnum = document.getElementById("inputCardNo");
+        var csv = document.getElementById("inputCsv");
+        var em = document.getElementById("inputMonth");
+        var ey = document.getElementById("inputYear");
+        function validationFunction() {
+            var indexMonth = em.options[em.selectedIndex].index;
+            var indexYear = ey.options[ey.selectedIndex].index;
+            if(!isName(chn.value))
+            {
+                chn.className = 'invalidText';
+            }
+            else{
+                chn.className = 'inputText';
+            }
+
+            if(!isCreditCard(cnum.value))
+            {
+                cnum.className = 'invalidText';
+            }
+            else{
+                cnum.className = 'inputText';
+            }
+            if(!isCsv(csv.value))
+            {
+                csv.className = 'invalidText';
+            }
+            else{
+                csv.className = 'inputText';
+            }
+            if(indexMonth>0){
+                em.className="inputText";
+            }
+            else{
+                em.className = "invalidText";
+            }
+            if(indexYear>0){
+                ey.className="inputText";
+            }
+            else{
+                ey.className = "invalidText";
+            }
+        }
+    </script>
+</div>
+</body>
+</html>

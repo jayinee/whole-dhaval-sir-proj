@@ -1,0 +1,104 @@
+﻿        .body {
+           background-color:#ffd1b3;
+        }
+        .boxLocation{
+            height:80%;
+            width:90%;
+            margin-top:1%;
+            left:5%;
+        }
+        .parent {
+            display: flex;
+            margin-top: 10px;
+        }
+       .product {
+            flex: 0.5;
+            /* Grow to rest of container */
+            background: whitesmoke ;
+            border: 1px solid black;
+            margin-right: 5px;
+            /* Just so it's visible */
+        }
+        img{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+      .labelPname{
+              font-size: 18px;
+              font-weight: 700;
+              left:8px;
+              margin: 1px;
+              color: #009DE4;
+              /*margin-left:.5em;*/
+              text-wrap: normal;
+              display: block;
+              padding-left: 0.5em;
+             text-indent:-0.1em;
+          }
+        .labelRate{
+            font-size: 14px;
+            font-weight: 600;
+            left:8px;
+            margin-top: 1px;
+            color: black;
+            margin-left:.5em;
+            margin-right: 3.3em;
+            text-decoration: line-through;
+        }
+        .labelDiscRate{
+            font-size: 14px;
+            font-weight: 600;
+            left:8px;
+            margin-top: 1px;
+            color: chocolate;
+            margin-left:.5em;
+            margin-right: 2em;
+
+        }
+        .button{
+            width:90%;
+            height:35px;
+            border:none;
+            margin-left:0.5em;
+            cursor:pointer;
+            border-radius:4px;
+            font-size: 16px;
+            font-weight: 600;
+            color: white;
+            box-shadow: 0 6px 2px -2px gray;
+            margin-top: 5px;
+            background: #96B03D;
+        }
+        .buttonProceed{
+            width:10%;
+            height:35px;
+            border:none;
+            cursor:pointer;
+            border-radius:4px;
+            font-size: 16px;
+            font-weight: 600;
+            color: white;
+            box-shadow: 0 6px 2px -2px gray;
+            margin-top: 5px;
+            background: #96B03D;
+        }
+        label{
+            margin-left: .5em;
+
+        }
+        table {
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        thead, tfoot{
+            text-align: center;
+            font-size: 15px;
+            font-weight: 700;
+            left:8px;
+            background-color: chocolate;
+        }
+    

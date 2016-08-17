@@ -1,0 +1,18 @@
+.boxLocation{
+    height:540px;
+    width:400px;
+    margin-top:6%;
+    left:40%;
+}
+.pwd1{
+    width: 152px;
+}
+.pwd2{
+    margin-left:1em;
+}
+.lbl{
+    margin-left:7em;
+}
+.checkbox{
+    margin-top: 25px;
+}

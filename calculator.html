@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="homecss.css">
+    <script src="calculator.js"></script>
+    <link href="calculator.css" rel="stylesheet" />
+    
+</head>
+<body>
+<div>
+    <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="index.html">Project 2</a></li>
+        <li><a href="aboutme.html">About</a></li>
+        <li><a href="calculator.html">Calculator</a></li>
+        <li><a href="shopping.html">Shopping</a></li>
+        <li class="dropdown">
+            <a href="#" class="dropbtn">Project 4</a>
+            <div class="dropdown-content">
+                <a href="signup.html">Sign Up</a>
+                <a href="search.html">Search</a>
+                <a href="questionnaire.html">Questionnaire</a>
+                <a href="login.html">Login</a>
+                <a href="colorbuilding.html">Color Building</a>
+                <a href="billing.html">Shipping</a>
+                <a href="scheduling.html">Schedule</a>
+                <a href="creditcard.html">Credit / Debit Card</a>
+            </div>
+        </li>
+       
+    </ul>
+</div>
+    <div class="box">
+        <div class="keys">
+            <p>
+                <input type="button" class="button buttonRed" value="C" onclick='clearKey("")'>
+                <input type="text" readonly size="18" maxlength="18" class="inputText"  id="display">
+            </p>
+            <p>
+                <input type="button" class="button buttonRed" value="M" onclick='memoryKey()'>
+                <input type="button" class="button buttonRed" value="MR" onclick='memoryReturnKey()'>
+                <input type="button" class="button buttonRed" value="MC" onclick='memoryClearKey()'>
+                <input type="button" class="button buttonRed" value="D" onclick='deleteKey()'>
+            </p>
+            <p>
+                <input type="button" class="button buttonWhite" value="7" onclick='doKey("7")'>
+                <input type="button" class="button buttonWhite" value="8" onclick='doKey("8")'>
+                <input type="button" class="button buttonWhite" value="9" onclick='doKey("9")'>
+                <input type="button" class="button buttonLightPink" value="+" onclick='doKey("+")'>
+            </p>
+            <p>
+                <input type="button" class="button buttonWhite" value="4" onclick='doKey("4")'>
+                <input type="button" class="button buttonWhite" value="5" onclick='doKey("5")'>
+                <input type="button" class="button buttonWhite" value="6" onclick='doKey("6")'>
+                <input type="button" class="button buttonLightPink" value="-" onclick='doKey("-")'>
+            </p>
+            <p>
+                <input type="button" class="button buttonWhite" value="1" onclick='doKey("1")'>
+                <input type="button" class="button buttonWhite" value="2" onclick='doKey("2")'>
+                <input type="button" class="button buttonWhite" value="3" onclick='doKey("3")'>
+                <input type="button" class="button buttonLightPink" value="/" onclick='doKey("/")'>
+            </p>
+            <p>
+                <input type="button" class="button buttonWhite" value="0" onclick='doKey("0")'>
+                <input type="button" class="button buttonWhite" value="." onclick='dotKey(".")'>
+                <input type="button" class="button buttonYellow" value="=" onclick='equalKey()'>
+                <input type="button" class="button buttonLightPink" value="X" onclick='doKey("*")'>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

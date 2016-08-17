@@ -1,0 +1,560 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shopping</title>
+    <link rel="stylesheet" href="homecss.css">
+    <link rel="stylesheet" href="commoncss.css">
+    <style type="text/css">
+        .boxLocation{
+            height:80%;
+            width:90%;
+            margin-top:1%;
+            left:5%;
+        }
+        .parent {
+            display: flex;
+            margin-top: 10px;
+        }
+       .product {
+            flex: 0.5;
+            /* Grow to rest of container */
+            background: whitesmoke ;
+            border: 1px solid black;
+            margin-right: 5px;
+            /* Just so it's visible */
+        }
+        img{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+      .labelPname{
+              font-size: 18px;
+              font-weight: 700;
+              left:8px;
+              margin: 1px;
+              color: #009DE4;
+              /*margin-left:.5em;*/
+              text-wrap: normal;
+              display: block;
+              padding-left: 0.5em;
+             text-indent:-0.1em;
+          }
+        .labelRate{
+            font-size: 14px;
+            font-weight: 600;
+            left:8px;
+            margin-top: 1px;
+            color: black;
+            margin-left:.5em;
+            margin-right: 3.3em;
+            text-decoration: line-through;
+        }
+        .labelDiscRate{
+            font-size: 14px;
+            font-weight: 600;
+            left:8px;
+            margin-top: 1px;
+            color: chocolate;
+            margin-left:.5em;
+            margin-right: 2em;
+
+        }
+        .button{
+            width:90%;
+            height:35px;
+            border:none;
+            margin-left:0.5em;
+            cursor:pointer;
+            border-radius:4px;
+            font-size: 16px;
+            font-weight: 600;
+            color: white;
+            box-shadow: 0 6px 2px -2px gray;
+            margin-top: 5px;
+            background: #96B03D;
+        }
+        .buttonProceed{
+            width:10%;
+            height:35px;
+            border:none;
+            cursor:pointer;
+            border-radius:4px;
+            font-size: 16px;
+            font-weight: 600;
+            color: white;
+            box-shadow: 0 6px 2px -2px gray;
+            margin-top: 5px;
+            background: #96B03D;
+        }
+        label{
+            margin-left: .5em;
+
+        }
+        table {
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        thead, tfoot{
+            text-align: center;
+            font-size: 15px;
+            font-weight: 700;
+            left:8px;
+            background-color: chocolate;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="index.html">Project-2</a></li>
+        <li><a href="aboutme.html">About</a></li>
+        <li class="dropdown">
+            <a href="#" class="dropbtn">Project-4</a>
+            <div class="dropdown-content">
+                <a href="signup.html">Sign Up</a>
+                <a href="search.html">Search</a>
+                <a href="questionnaire.html">Questionnaire</a>
+                <a href="login.html">Login</a>
+                <a href="colorbuilding.html">Color Building</a>
+                <a href="billing.html">Shipping</a>
+                <a href="scheduling.html">Schedule</a>
+                <a href="creditcard.html">Credit / Debit Card</a>
+            </div>
+
+        </li>
+        <li><a href="calculator.html">Calculator</a></li>
+        <li><a href="shopping.html">Shopping</a></li>
+    </ul>
+</div>
+<div class="box boxLocation">
+    <div class="upper"> Shopping</div>
+    <div class="lower"><br>
+        <div class="upper" style="background-color: burlywood;border-radius: 0px;font-weight: 400;width: 99.6%">Hand Blender</div>
+        <div class="parent">
+
+            <div class="product">
+                <p>
+                    <img src="images/hb1.jpg" alt="hb">
+                    <label class="labelPname">Maharaja Whiteline Turbomix 350-Watt Hand Blender (White and Red)</label>
+                    <label class="labelRate"> Price: 920 Rs</label>
+                    <label class="labelDiscRate"> Discounted Price: 780 Rs</label>
+                    <input type="button" value="Add to Cart" class="button" onclick="addInCart('Maharaja Whiteline Turbomix 350-Watt Hand Blender (White and Red)','780','hb1')">
+                </p>
+
+            </div>
+            <div class="product">
+                <p>
+                    <img src="images/hb2.jpg" alt="hb">
+                    <label class="labelPname">Philips Daily Collection HR1459 300-Watt Hand Mixer (White and Beige)</label>
+                    <label class="labelRate"> Price: 1900 Rs</label>
+                    <label class="labelDiscRate"> Discounted Price: 1753 Rs</label>
+                    <input class="button" type="button" value="Add to Cart" onclick="addInCart('Philips Daily Collection HR1459 300-Watt Hand Mixer (White and Beige)','1753','hb2')">
+                </p>
+            </div>
+            <div class="product">
+                <p>
+                    <img src="images/hb3.jpg" alt="hb">
+                    <label class="labelPname">Orpat HHB-100E WOB 250-Watt Hand Blender (White)</label>
+                    <label class="labelRate"> Price: 920 Rs</label>
+                    <label class="labelDiscRate"> Discounted Price: 680 Rs</label>
+                    <input class="button" type="button" value="Add to Cart" onclick="addInCart('Orpat HHB-100E WOB 250-Watt Hand Blender (White)','680','hb3')">
+                </p>
+
+            </div>
+            <div class="product">
+                <p>
+                    <img src="images/hb4.jpg" alt="hb">
+                    <label class="labelPname" >Prestige PHB 6.0 200-Watt Hand Blender</label>
+                    <label class="labelRate"> Price: 1950 Rs</label>
+                    <label class="labelDiscRate"> Discounted Price: 1709 Rs &nbsp; </label><br/>
+                    <input class="button" type="button" value="Add to Cart" onclick="addInCart('Prestige PHB 6.0 200-Watt Hand Blender','1709','hb4')">
+                </p>
+
+            </div>
+
+        </div>
+        <div class="parent">
+            <div class="product">
+                <p>
+                    <img src="images/hb5.jpg" alt="hb">
+                    <label class="labelPname">Orpat OHM-207 150-Watt Hand Mixer (White)</label>
+                    <label class="labelRate"> Price: 800 Rs</label>
+                    <label class="labelDiscRate"> Discounted Price: 699 Rs</label>
+                    <input class="button" type="button" value="Add to Cart" onclick="addInCart('Orpat OHM-207 150-Watt Hand Mixer (White)','699','hb5')">
+                </p>
+
+            </div>
+            <div class="product">
+                <p>
+                    <img src="images/hb6.jpg" alt="hb">
+                    <label class="labelPname">Philips HR1350/C 250-Watt Hand Blender</label>
+                    <label class="labelRate"> Price: 1300 Rs</label>
+                    <label class="labelDiscRate"> Discounted Price: 1139 Rs &nbsp;</label><br/>
+                    <input class="button" type="button" value="Add to Cart" onclick="addInCart('Philips HR1350/C 250-Watt Hand Blender','1139','hb6')">
+                </p>
+            </div>
+            <div class="product">
+                <p>
+                    <img src="images/hb7.jpg" alt="hb">
+                    <label class="labelPname">Jaipan JTB-250 250-Watt Turbo Hand Blender (White/Blue)</label>
+                    <label class="labelRate"> Price: 800 Rs</label>
+                    <label class="labelDiscRate"> Discounted Price: 729 Rs</label>
+                    <input class="button" type="button" value="Add to Cart" onclick="addInCart('Jaipan JTB-250 250-Watt Turbo Hand Blender (White/Blue)','729','hb7')">
+                </p>
+
+            </div>
+            <div class="product">
+                <p>
+                    <img src="images/hb8.jpg" alt="hb">
+                    <label class="labelPname">Orpat HHB-100E 250-Watt Hand Blender (White)</label>
+                    <label class="labelRate"> Price: 850 Rs</label>
+                    <label class="labelDiscRate"> Discounted Price: 759 Rs</label>
+                    <input class="button" type="button" value="Add to Cart" onclick="addInCart('Orpat HHB-100E 250-Watt Hand Blender (White)','850','hb8')">
+                </p>
+
+            </div>
+
+        </div>
+        <div class="parent">
+            <div class="product">
+                <p>
+                    <img src="images/hb9.jpg" alt="hb">
+                    <label class="labelPname">Philips Daily Collection HR1363 600-Watt Hand Blender with Chopper and Beaker (White)</label>
+                    <label class="labelRate"> Price: 2450 Rs</label>
+                    <label class="labelDiscRate"> Discounted Price: 2254 Rs</label>
+                    <input class="button" type="button" value="Add to Cart" onclick="addInCart('Philips Daily Collection HR1363 600-Watt Hand Blender with Chopper and Beaker (White)','2254','hb9')">
+                </p>
+
+            </div>
+            <div class="product">
+                <p>
+                    <img src="images/hb10.jpg" alt="hb">
+                    <label class="labelPname">Kingstar Plastic Hand Blender Blend Pro Plus,White</label>
+                    <label class="labelRate"> Price: 1100 Rs</label>
+                    <label class="labelDiscRate"> Discounted Price: 949 Rs&nbsp;&nbsp;</label> <br/><br/>
+                    <input class="button" type="button" value="Add to Cart" onclick="addInCart('Kingstar Plastic Hand Blender Blend Pro Plus,White','949','hb10')">
+                </p>
+            </div>
+            <div class="product">
+                <p>
+                    <img src="images/hb11.jpg" alt="hb">
+                    <label class="labelPname">Signora Care 200 Watts Hand Blender</label>
+                    <label class="labelRate"> Price: 625 Rs</label>
+                    <label class="labelDiscRate" > Discounted Price: 499 Rs&nbsp;&nbsp;&nbsp;&nbsp;</label><br/><br/><br/>
+                    <input class="button" type="button" value="Add to Cart" onclick="addInCart('Signora Care 200 Watts Hand Blender','499','hb11')">
+                </p>
+
+            </div>
+            <div class="product">
+                <p>
+                    <img src="images/hb12.jpg" alt="hb">
+                    <label class="labelPname">Bajaj Majesty HB04 300-Watt Hand Blender</label>
+                    <label class="labelRate"> Price: 1000 Rs</label>
+                    <label class="labelDiscRate"> Discounted Price: 895 Rs&nbsp;</label><br/><br/>
+                    <input class="button" type="button" value="Add to Cart" onclick="addInCart('Bajaj Majesty HB04 300-Watt Hand Blender','895','hb12')">
+                </p>
+
+            </div>
+
+        </div>
+        <p>
+            <input type="button" class="buttonProceed" value="Show Cart" id="scButton">
+        </p>
+
+        <div id="shoppingCart" style="display: none;">
+            <div class="upper" style="background-color: burlywood;border-radius: 0px;font-weight: 400;width: 99.6%">Shopping Cart</div> <br>
+            <table id="scTable" >
+            <thead >
+            <tr >
+                <td style="width: 55%"> Product</td>
+                <td style="width: 10%"> Unit Price</td>
+                <td style="width: 5%"> Quantity</td>
+                <td style="width: 5%"> Discount Amount</td>
+                <td style="width: 10%"> Total Price</td>
+                <td style="width: 10%"> Remove</td>
+            </tr>
+            </thead>
+            <tbody >
+            </tbody>
+        </table>
+            <table id="billingTable" width="100%">
+                <tfoot>
+                <tr>
+                    <td style="text-align: right;width:82%">Total bill amount:</td>
+                    <td style="text-align: left;width:25%" id="cellTotalBill">3700</td>
+                </tr>
+                </tfoot>
+            </table>
+            <p style="margin-top: 0.5em">
+            <label>Use promo code:</label>
+            <input type="checkbox" class="checkbox" id="ckPromo"/>
+            <input type="text" placeholder="promo code" id="txtPromo">
+            <input type="button" class="buttonProceed" value="Proceed" style="margin-left: 2em;" id="btnProceed">
+            <label id="lblPromoMsg"></label>
+        </p>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var sCart = document.getElementById("shoppingCart");
+        var sTable = document.getElementById("scTable");
+        var bTable = document.getElementById("billingTable");
+        var showHideButton = document.getElementById("scButton");
+        var promoCheckBox = document.getElementById("ckPromo");
+        var promoTextBox = document.getElementById("txtPromo");
+        var buttonProceed = document.getElementById("btnProceed");
+        var labelPromoMessage = document.getElementById("lblPromoMsg");
+
+        showHideButton.addEventListener("click", showHideCart,false);
+        promoCheckBox.addEventListener("click",enableDisablePromoTxt,false);
+        buttonProceed.addEventListener("click",applyPromoCode,false);
+
+        var cartList = [];
+        clearPromoDetail();
+
+        function showHideCart() {
+            if(sTable.rows.length > 1){
+                if (sCart.style.display !== 'none') {
+                    sCart.style.display = 'none';
+                    showHideButton.value = "Show Cart";
+                }
+                else {
+                    sCart.style.display = 'block';
+                    showHideButton.value = "Hide Cart";
+                }
+            }
+            else{
+                sCart.style.display = 'none';
+                showHideButton.value = "Show Cart";
+                alert("Shopping cart is EMPTY.");
+            }
+
+
+        }
+
+        function addInCart(pName,pPrice,pCode){
+           if(!isFindInCart(pCode,cartList)){
+
+               var rowCount = sTable.rows.length;
+               var row = sTable.insertRow(rowCount);
+
+               var cell2 = row.insertCell(0);
+               cell2.innerHTML = pName;
+
+               var cell3 = row.insertCell(1);
+               cell3.innerHTML = pPrice;
+
+               var cell4 = row.insertCell(2);
+               var element1 = document.createElement("input");
+               element1.type = "number";
+               element1.value = 1;
+               element1.name = pCode;           // if commented than when user give 0 than remove from card but again not add same product after removal
+               cell4.appendChild(element1);
+               element1.setAttribute('onchange','applyQty(this)');
+
+               var cell5 = row.insertCell(3);
+               var element2 = document.createElement("input");
+               element2.type = "text";
+               cell5.appendChild(element2);
+               element2.setAttribute('onchange','applyDiscountAmount(this)');
+
+               var cell6 = row.insertCell(4);
+               cell6.innerHTML = pPrice;
+
+               var cell7 = row.insertCell(5);
+               var element3 = document.createElement("input");
+               element3.type = "image";
+               element3.src = "images/remove.png";
+               element3.alt = "Submit";
+             element3.name = pCode;   // if commented than after removal from card same product can't add again in cart
+               cell7.appendChild(element3);
+               element3.setAttribute('onclick','removeFromCart(this)');
+
+               clearPromoDetail();
+               cartList.push(pCode);
+               calculateTotalBill();
+           }
+
+        }
+
+        function isFindInCart(productCode,cartList){
+            if(cartList.indexOf(productCode)>=0)
+                return true;
+            else
+                return false;
+        }
+        
+        function applyQty(selectedRow) {
+            var row = selectedRow.parentNode.parentNode;
+            var cellUnitPrice = sTable.rows[row.rowIndex].cells[1].innerHTML;
+            var cellQty = selectedRow.value;
+            var cellDiscountAmount = parseFloat(sTable.rows[row.rowIndex].cells[3].firstElementChild.value);
+            var totalPrice = parseFloat(cellUnitPrice) * parseInt(cellQty);
+            if(!isNaN(parseInt(cellQty))){
+                clearPromoDetail();
+                if(cellQty > 0){
+                    if(cellDiscountAmount > 0 && cellDiscountAmount < totalPrice){
+                        sTable.rows[row.rowIndex].cells[4].innerHTML = (totalPrice - cellDiscountAmount).toFixed(2);
+                        calculateTotalBill();
+                    }
+                    else{
+                        sTable.rows[row.rowIndex].cells[4].innerHTML = totalPrice.toFixed(2);
+                        calculateTotalBill();
+                    }
+
+                }
+                else if(cellQty == 0){
+                    sTable.deleteRow(row.rowIndex);
+                    var index = cartList.indexOf(selectedRow.name);
+                    cartList.splice(index, 1);
+                    calculateTotalBill();
+                    if(sTable.rows.length < 2){
+                        sCart.style.display = 'none';
+                        showHideButton.value = "Show Cart";
+                    }
+                }
+                else{
+                    sTable.rows[row.rowIndex].cells[4].innerHTML = 0;
+                    calculateTotalBill();
+                }
+
+            }
+            else{
+                clearPromoDetail();
+                sTable.rows[row.rowIndex].cells[4].innerHTML = 0;
+                calculateTotalBill();
+            }
+
+        }
+
+        function removeFromCart(selectedRow) {
+            var row = selectedRow.parentNode.parentNode;
+            var cellProductName = sTable.rows[row.rowIndex].cells[0].innerHTML;
+            var r = confirm("Are you sure to remove " + cellProductName + " from shopping cart?");
+            if (r == true) {
+                clearPromoDetail();
+                sTable.deleteRow(row.rowIndex);
+                var index = cartList.indexOf(selectedRow.name);
+                cartList.splice(index, 1);
+                calculateTotalBill();
+                if(sTable.rows.length < 2){
+                    sCart.style.display = 'none';
+                    showHideButton.value = "Show Cart";
+                }
+            }
+
+        }
+
+        function applyDiscountAmount(selectedRow) {
+            var row = selectedRow.parentNode.parentNode;
+            var cellUnitPrice = parseFloat(sTable.rows[row.rowIndex].cells[1].innerHTML);
+            var cellQty = parseInt(sTable.rows[row.rowIndex].cells[2].firstElementChild.value);
+            var totalPrice = cellUnitPrice * cellQty;
+            var cellDiscountAmount = parseFloat(selectedRow.value);
+            if((totalPrice > cellDiscountAmount) && cellDiscountAmount > 0 && cellQty > 0){
+                sTable.rows[row.rowIndex].cells[4].innerHTML = (totalPrice - cellDiscountAmount).toFixed(2);
+                calculateTotalBill();
+                clearPromoDetail();
+            }
+            else{
+                sTable.rows[row.rowIndex].cells[4].innerHTML = totalPrice.toFixed(2);
+                calculateTotalBill();
+                clearPromoDetail();
+            }
+
+        }
+
+        function calculateTotalBill(){
+            if(sTable.rows.length > 1){
+                var billAmount = 0;
+                for(var i=1;i<sTable.rows.length;i++){
+                    var totalPrice = parseFloat(sTable.rows[i].cells[4].innerHTML);
+                    billAmount += totalPrice;
+                }
+                bTable.rows[0].cells[1].innerHTML =  billAmount.toFixed(2);
+            }
+        }
+
+        function enableDisablePromoTxt(){
+            labelPromoMessage.innerHTML = '';
+            if(promoCheckBox.checked){
+                promoTextBox.disabled =false;
+            }
+            else{
+                promoTextBox.disabled =true;
+                promoTextBox.value = '';
+                calculateTotalBill();
+            }
+
+        }
+
+        function applyPromoCode(){
+            if(promoCheckBox.checked){
+                promoTextBox.value.trim();
+                promoTextBox.value = promoTextBox.value.replace(/ +/g, " ");
+                if(promoTextBox.value.length > 0){
+                    var pCode = promoTextBox.value.toLowerCase();
+                    calculateTotalBill();
+                    var totalBill = parseFloat(bTable.rows[0].cells[1].innerHTML);
+                    var msg = '' ;
+                    switch(pCode){
+                        case "cashback" :
+                                         msg = "Promo Discount:" + (totalBill * 0.01).toFixed(2);
+                                         totalBill *= 0.99 ;
+                                         labelPromoMessage.innerHTML = "Promo code " + pCode + " (1% off) apply successfully" ;
+                                         labelPromoMessage.style.color='green';
+
+                                         break;
+                        case "supersunday" :
+                                         msg = "Promo Discount:" + (totalBill * 0.05).toFixed(2);
+                                         totalBill *= 0.95 ;
+                                         labelPromoMessage.innerHTML = "Promo code " + pCode + " (5% off) apply successfully";
+                                         labelPromoMessage.style.color='green';
+                                         break;
+                        case "hotdeal" :
+                                         msg = "Promo Discount:" + (totalBill * 0.1).toFixed(2);
+                                         totalBill *= 0.9 ;
+                                         labelPromoMessage.innerHTML = "Promo code " + pCode + " (10% off) apply successfully" ;
+                                         labelPromoMessage.style.color='green';
+                                         break;
+                        case "bigsale" :
+                                         msg = "Promo Discount:" + (totalBill * 0.15).toFixed(2);
+                                         totalBill *= 0.85 ;
+                                         labelPromoMessage.innerHTML = "Promo code " + pCode + " (15% off) apply successfully";
+                                         labelPromoMessage.style.color='green';
+                                         break;
+                        default:
+                                         msg = '';
+                                         totalBill *= 1;
+                                         labelPromoMessage.innerHTML = "Given Promo code " + pCode + " is NOT valid";
+                                         labelPromoMessage.style.color='red';
+                    }
+                    bTable.rows[0].cells[1].innerHTML = msg.length > 0 ? (totalBill.toFixed(2)+ " " + "(" + msg + ")" ): totalBill.toFixed(2);
+                }
+                else {
+                    alert("You have not given any Promo code.");
+                    labelPromoMessage.innerHTML = '';
+                }
+
+            }
+            else{
+                clearPromoDetail();
+                calculateTotalBill();
+            }
+        }
+
+        function clearPromoDetail(){
+            promoCheckBox.checked = false;
+            promoTextBox.value = '';
+            promoTextBox.disabled = true;
+            labelPromoMessage.innerHTML = '';
+        }
+    </script>
+</div>
+</body>
+</html>

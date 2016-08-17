@@ -1,0 +1,150 @@
+﻿
+        .boxLocation{
+            height:100%;
+            width:50%;
+            margin-top:11%;
+            left:25%;
+        }
+        .side{
+            margin-left: 30%;
+            border: solid 1px black;
+            background: white;
+            height: 72%;
+            width: 42%;
+            position: absolute;
+            top: 5em;
+            left: 25%;
+        }
+        input[type=range] {
+            -webkit-appearance: none;
+            margin: 10px 0;
+            width: 50%;
+        }
+        input[type=range]:focus {
+            outline: none;
+        }
+        /*For Chrome*/
+        input[type=range]::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 10px;
+            cursor: pointer;
+            animate: 0.2s;
+            box-shadow: 1px 1px 1px #000000;
+            /* background: #3071A9;*/
+            border-radius: 5px;
+            border: 1px solid #000000;
+        }
+        input[type=range]::-webkit-slider-thumb {
+            box-shadow: 1px 1px 1px #000000;
+            border: 1px solid #000000;
+            height: 30px;
+            width: 15px;
+            border-radius: 5px;
+            background: #FFFFFF;
+            cursor: pointer;
+            -webkit-appearance: none;
+            margin-top: -11px;
+        }
+
+        .inputRed[type=range]::-webkit-slider-runnable-track{
+            background: red;
+        }
+        .inputGreen[type=range]::-webkit-slider-runnable-track{
+            background: green;
+        }
+        .inputBlue[type=range]::-webkit-slider-runnable-track{
+            background: blue;
+        }
+        .inputAlpha[type=range]::-webkit-slider-runnable-track{
+            background: oldlace;
+        }
+        /*For Firefox*/
+        input[type=range]::-moz-range-track {
+            width: 100%;
+            height: 10px;
+            cursor: pointer;
+            animate: 0.2s;
+            box-shadow: 1px 1px 1px #000000;
+            /* background: #3071A9;*/
+            border-radius: 5px;
+            border: 1px solid #000000;
+        }
+        input[type=range]::-moz-range-thumb {
+            box-shadow: 1px 1px 1px #000000;
+            border: 1px solid #000000;
+            height: 30px;
+            width: 15px;
+            border-radius: 5px;
+            background: #FFFFFF;
+            cursor: pointer;
+        }
+        .inputRed[type=range]::-moz-range-track{
+            background: red;
+        }
+        .inputGreen[type=range]::-moz-range-track{
+            background: green;
+        }
+        .inputBlue[type=range]::-moz-range-track{
+            background: blue;
+        }
+        .inputAlpha[type=range]::-moz-range-track{
+            background: oldlace;
+        }
+
+        /*For IE*/
+        input[type=range]::-ms-track {
+            width: 100%;
+            height: 10px;
+            cursor: pointer;
+            animate: 0.2s;
+            background: transparent;
+            border-color: transparent;
+            color: transparent;
+        }
+        input[type=range]::-ms-fill-lower {
+            background: #3071A9;
+            border: 1px solid #000000;
+            border-radius: 10px;
+            box-shadow: 1px 1px 1px #000000;
+        }
+        input[type=range]::-ms-fill-upper {
+            background: #3071A9;
+            border: 1px solid #000000;
+            border-radius: 10px;
+            box-shadow: 1px 1px 1px #000000;
+        }
+        input[type=range]::-ms-thumb {
+            box-shadow: 1px 1px 1px #000000;
+            border: 1px solid #000000;
+            height: 30px;
+            width: 15px;
+            border-radius: 5px;
+            background: #FFFFFF;
+            cursor: pointer;
+        }
+
+        .inputRed[type=range]::-ms-fill-upper{
+            background: red;
+        }
+        .inputRed[type=range]::-ms-fill-lower{
+            background: red;
+        }
+        .inputGreen[type=range]::-ms-fill-upper{
+            background: green;
+        }
+        .inputGreen[type=range]::-ms-fill-lower{
+            background: green;
+        }
+        .inputBlue[type=range]::-ms-fill-upper{
+            background: blue;
+        }
+        .inputBlue[type=range]::-ms-fill-lower{
+            background: blue;
+        }
+        .inputAlpha[type=range]::-ms-fill-upper{
+            background: oldlace;
+        }
+        .inputAlpha[type=range]::-ms-fill-lower{
+            background: oldlace;
+        }
+    

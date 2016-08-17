@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="utilities.js"></script>
+    <meta charset="UTF-8">
+    <title>Testing Javascript</title>
+    <script type="text/javascript" src="testingjs.js" >
+
+    </script>
+    <style type="text/css">
+        {  box-sizing: border-box;}html {  font-family: Georgia;  background-color: #ffe5ff;}
+        p{
+         color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <form name="loginForm">
+        <fieldset>
+            <legend> Give required information</legend>
+            Input 1: <input type="text" name="givenValue"><br/><br/>
+            Input 2: <input type="text" name="givenValueTwo"><br/><br/>
+            Input 3: <input type="text" name="givenValueThree"><br/><br/>
+        </fieldset>
+    </form>  <br/>
+    <button onclick="shuffle(document.getElementsByName('givenValue')[0].value, document.getElementsByName('givenValueTwo')[0].value, document.getElementsByName('givenValueThree')[0].value)">Show Result</button>
+    <p id="resultValues"></p>
+</body>
+</html>

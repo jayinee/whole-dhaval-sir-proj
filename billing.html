@@ -1,0 +1,280 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Billing / Shipping Address</title>
+    <link rel="stylesheet" href="commoncss.css">
+    <link rel="stylesheet" href="homecss.css">
+    <script type="text/javascript" src="validator.js" ></script>
+
+    <link href="billing.css" rel="stylesheet" />
+
+</head>
+<body>
+<div>
+    <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="index.html">Project 2</a></li>
+        <li><a href="aboutme.html">About</a></li>
+        <li><a href="calculator.html">Calculator</a></li>
+        <li><a href="shopping.html">Shopping</a></li>
+        <li class="dropdown">
+            <a href="#" class="dropbtn">Project 4</a>
+            <div class="dropdown-content">
+                <a href="signup.html">Sign Up</a>
+                <a href="search.html">Search</a>
+                <a href="questionnaire.html">Questionnaire</a>
+                <a href="login.html">Login</a>
+                <a href="colorbuilding.html">Color Building</a>
+                <a href="billing.html">Shipping</a>
+                <a href="scheduling.html">Schedule</a>
+                <a href="creditcard.html">Credit / Debit Card</a>
+            </div>
+        </li>
+        
+    </ul>
+</div>
+<div class="box boxLocation">
+    <div class="upper"> Billing / Shipping address</div>
+    <div class="lower">
+        <div id="parent">
+            <div id="shipping"><div class="upper" style="background-color: chocolate;border-radius: 0px;font-weight: 400">Shipping Address</div>
+                <p>
+                    <label>First Name</label><label style="color: red">&nbsp*</label>
+                    <label style="margin-left:6.4em;">Last Name</label><label style="color: red">&nbsp*</label>
+                    <input type="text" class="inputText"  autofocus style="left:2px; height:35px;margin-top: 5px; width: 45%" id="inputFns">
+                    <input type="text" class="inputText" style="height:35px;margin-top: 5px; width: 45%" id="inputLns">
+                </p>
+                <p>
+                    <label>Address Line 1</label><label style="color: red">&nbsp*</label>
+                    <input type="text" class="inputText" style="left:2px; height:35px;margin-top: 5px; width: 94%" id="inputAl1s">
+                </p>
+                <p>
+                    <label>Address Line 2</label><label style="color: red">&nbsp*</label>
+                    <input type="text" class="inputText" style="left:2px; height:35px;margin-top: 5px; width: 94%" id="inputAl2s">
+                </p>
+                <p>
+                    <label>City</label><label style="color: red">&nbsp*</label>
+                    <label style="margin-left:9.3em;">Post code</label><label style="color: red">&nbsp*</label>
+                    <input type="text" class="inputText"  autofocus style="left:2px; height:35px;margin-top: 5px; width: 45%" id="inputCits">
+                    <input type="text" class="inputText" style="height:35px;margin-top: 5px; width: 44%" id="inputPcs">
+                </p>
+                <p>
+                    <label>State</label><label style="color: red">&nbsp*</label>
+                    <label style="margin-left:9.0em;">Country</label><label style="color: red">&nbsp*</label>
+                    <input type="text" class="inputText"  autofocus style="left:2px; height:35px;margin-top: 5px; width: 45%" id="inputSts">
+                    <input type="text" class="inputText" style="height:35px;margin-top: 5px; width: 44%" id="inputCons">
+                </p>
+            </div>
+            <div id="billing"><div class="upper" style="background-color: chocolate;border-radius: 0px;font-weight: 400">Billing Address</div>
+                <p>
+                    <label>First Name</label><label style="color: red">&nbsp*</label>
+                    <label style="margin-left:6.4em;">Last Name</label><label style="color: red">&nbsp*</label>
+                    <input type="text" class="inputText"  autofocus style="left:2px; height:35px;margin-top: 5px; width: 45%" id="inputFnb">
+                    <input type="text" class="inputText" style="height:35px;margin-top: 5px; width: 45%" id="inputLnb">
+                </p>
+                <p>
+                    <label>Address Line 1</label><label style="color: red">&nbsp*</label>
+                    <input type="text" class="inputText" style="left:2px; height:35px;margin-top: 5px; width: 94%" id="inputAl1b" >
+                </p>
+                <p>
+                    <label>Address Line 2</label><label style="color: red">&nbsp*</label>
+                    <input type="text" class="inputText" style="left:2px; height:35px;margin-top: 5px; width: 94%" id="inputAl2b">
+                </p>
+                <p>
+                    <label>City</label><label style="color: red">&nbsp*</label>
+                    <label style="margin-left:9.5em;">Post code</label><label style="color: red">&nbsp*</label>
+                    <input type="text" class="inputText"  autofocus style="left:2px; height:35px;margin-top: 5px; width: 45%" id="inputCitb">
+                    <input type="text" class="inputText" style="height:35px;margin-top: 5px; width: 44%" id="inputPcb">
+                </p>
+                <p>
+                    <label>State</label><label style="color: red">&nbsp*</label>
+                    <label style="margin-left:9.0em;">Country</label><label style="color: red">&nbsp*</label>
+                    <input type="text" class="inputText"  autofocus style="left:2px; height:35px;margin-top: 5px; width: 45%" id="inputStb">
+                    <input type="text" class="inputText" style="height:35px;margin-top: 5px; width: 44%" id="inputConb">
+                </p>
+            </div>
+        </div>
+
+        <p style="margin-top: 0.5em">
+            <input type="checkbox" class="checkbox" id="checkboxSame" />
+            <label>Billing address is same as shipping address.</label>
+
+            <input type="button" class="button" value="Continue" style="margin-left: 2em;" id="submitButton">
+        </p>
+    </div>
+    <script type="text/javascript">
+        document.getElementById("submitButton").addEventListener("click", validationFunction,false);
+        document.getElementById("checkboxSame").addEventListener("click", copyValue,false);
+        // Shipping
+        var fnShi = document.getElementById("inputFns");
+        var lnShi = document.getElementById("inputLns");
+        var a1Shi = document.getElementById("inputAl1s");
+        var a2Shi = document.getElementById("inputAl2s");
+        var cityShi = document.getElementById("inputCits");
+        var pcShi = document.getElementById("inputPcs");
+        var stShi = document.getElementById("inputSts");
+        var conShi = document.getElementById("inputCons");
+        // Billing
+        var fnBi = document.getElementById("inputFnb");
+        var lnBi = document.getElementById("inputLnb");
+        var a1Bi = document.getElementById("inputAl1b");
+        var a2Bi = document.getElementById("inputAl2b");
+        var cityBi = document.getElementById("inputCitb");
+        var pcBi = document.getElementById("inputPcb");
+        var stBi = document.getElementById("inputStb");
+        var conBi = document.getElementById("inputConb");
+
+        function validationFunction(){
+            // Shipping Validation
+            if(!isName(fnShi.value))
+            {
+                fnShi.className = 'invalidText';
+            }
+            else{
+                fnShi.value = trimmedOutput(fnShi.value);
+                fnShi.className = 'inputText';
+            }
+            if(!isName(lnShi.value))
+            {
+                lnShi.className = 'invalidText';
+            }
+            else{
+                lnShi.className = 'inputText';
+            }
+            if(!isName(cityShi.value))
+            {
+                cityShi.className = 'invalidText';
+            }
+            else{
+                cityShi.className = 'inputText';
+            }
+            if(!isName(stShi.value))
+            {
+                stShi.className = 'invalidText';
+            }
+            else{
+                stShi.className = 'inputText';
+            }
+            if(!isName(conShi.value))
+            {
+                conShi.className = 'invalidText';
+            }
+            else{
+                conShi.className = 'inputText';
+            }
+            if(!isAddress(a1Shi.value))
+            {
+                a1Shi.className = 'invalidText';
+            }
+            else{
+                a1Shi.className = 'inputText';
+            }
+            if(!isAddress(a2Shi.value))
+            {
+                a2Shi.className = 'invalidText';
+            }
+            else{
+                a2Shi.className = 'inputText';
+            }
+            if(!isAddress(pcShi.value))
+            {
+                pcShi.className = 'invalidText';
+            }
+            else{
+                pcShi.className = 'inputText';
+            }
+
+            // Billing Validation
+            if(!isName(fnBi.value))
+            {
+                fnBi.className = 'invalidText';
+            }
+            else{
+                fnBi.className = 'inputText';
+            }
+            if(!isName(lnBi.value))
+            {
+                lnBi.className = 'invalidText';
+            }
+            else{
+                lnBi.className = 'inputText';
+            }
+            if(!isName(cityBi.value))
+            {
+                cityBi.className = 'invalidText';
+            }
+            else{
+                cityBi.className = 'inputText';
+            }
+            if(!isName(stBi.value))
+            {
+                stBi.className = 'invalidText';
+            }
+            else{
+                stBi.className = 'inputText';
+            }
+            if(!isName(conBi.value))
+            {
+                conBi.className = 'invalidText';
+            }
+            else{
+                conBi.className = 'inputText';
+            }
+            if(!isAddress(a1Bi.value))
+            {
+                a1Bi.className = 'invalidText';
+            }
+            else{
+                a1Bi.className = 'inputText';
+            }
+            if(!isAddress(a2Bi.value))
+            {
+                a2Bi.className = 'invalidText';
+            }
+            else{
+                a2Bi.className = 'inputText';
+            }
+            if(!isAddress(pcBi.value))
+            {
+                pcBi.className = 'invalidText';
+            }
+            else{
+                pcBi.className = 'inputText';
+            }
+        }
+
+        function copyValue(){
+            var isChecked = document.getElementById("checkboxSame").checked;
+            var nodes = document.getElementById("billing").getElementsByTagName('*');
+            if(isChecked){
+                fnBi.value = fnShi.value;
+                lnBi.value = lnShi.value  ;
+                a1Bi.value = a1Shi.value ;
+                a2Bi.value = a2Shi.value ;
+                cityBi.value = cityShi.value ;
+                pcBi.value = pcShi.value ;
+                stBi.value = stShi.value ;
+                conBi.value = conShi.value;
+                for(var i = 0; i < nodes.length; i++){
+                    nodes[i].disabled =true;
+                }
+            }
+            else{
+                fnBi.value = '';
+                lnBi.value = ''  ;
+                a1Bi.value = '' ;
+                a2Bi.value = '' ;
+                cityBi.value = '' ;
+                pcBi.value = '' ;
+                stBi.value = '' ;
+                conBi.value = '';
+                for(var i = 0; i < nodes.length; i++){
+                    nodes[i].disabled =false;
+                }
+            }
+        }
+    </script>
+</div>
+</body>
+</html>

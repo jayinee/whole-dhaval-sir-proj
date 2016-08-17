@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scheduling</title>
+    <link rel="stylesheet" href="homecss.css">
+    <link rel="stylesheet" href="commoncss.css">
+    <link rel="stylesheet" href="signupcss.css" type="text/css">
+    <script type="text/javascript" src="validator.js" ></script>
+</head>
+<body>
+<div>
+    <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="index.html">Project 2</a></li>
+        <li><a href="aboutme.html">About</a></li>
+        <li><a href="calculator.html">Calculator</a></li>
+        <li><a href="shopping.html">Shopping</a></li>
+        <li class="dropdown">
+            <a href="#" class="dropbtn">Project 4</a>
+       
+            <div class="dropdown-content">
+                <a href="signup.html">Sign Up</a>
+                <a href="search.html">Search</a>
+                <a href="questionnaire.html">Questionnaire</a>
+                <a href="login.html">Login</a>
+                <a href="colorbuilding.html">Color Building</a>
+                <a href="billing.html">Shipping</a>
+                <a href="scheduling.html">Schedule</a>
+                <a href="creditcard.html">Credit / Debit Card</a>
+            </div>
+        </li>
+       
+    </ul>
+</div>
+<div class="box boxLocation" style="height: 560px">
+    <div class="upper"> Scheduling</div>
+    <div class="lower">
+        <p>
+            <label>Date (dd-mm-yyyy)</label><label style="color: red">&nbsp*</label>
+            <label style="margin-left:2.6em;">Time (HH:MM)</label><label style="color: red">&nbsp*</label>
+            <input type="text" class="inputText pwd1" style="left:2px; height:35px;margin-top: 5px;" autofocus id="dateInput">
+            <input type="text" class="inputText pwd1 pwd2" style="left:2px; height:35px;margin-top: 5px;" id="timeInput">
+        </p>
+        <p>
+            <label>Timezone</label><label style="color: red">&nbsp*</label>
+            <select class="inputText" style="top: 2px;left: 2px;height: 35px;margin-top: 5px" id="inputTimeZone">
+                <option>--Select Timezone--</option>
+                <option>UTC−12:00- Baker Island, Howland Island</option>
+                <option>UTC−11:00- American Samoa, Niue</option>
+                <option>UTC+04:00- Armenia, Azerbaijan, Georgia, Mauritius, Oman, Seychelles, United Arab Emirates</option>
+                <option>UTC+05:30- India, Sri Lanka</option>
+                <option>UTC+06:00- Bangladesh, Bhutan, British Indian Ocean Territory, Kazakhstan</option>
+                <option>UTC+07:00- Cambodia, Indonesia (west), Laos, Russia (Krasnoyarsk), Thailand, Vietnam</option>
+                <option>UTC+09:00- East Timor, Indonesia (east), Japan, Russia (most of Sakha), South Korea</option>
+            </select>
+        </p>
+        <p>
+            <label>Message</label>
+            <textarea rows="4" cols="50" class="inputText" style="left:2px; height:70px;margin-top: 5px;"></textarea>
+        </p>
+        <p>
+            <label>Contact Number</label><label style="color: red">&nbsp*</label>
+            <input type="number" class="inputText" style="left:2px; height:35px;margin-top: 5px;" id="inputContact">
+        </p>
+        <p>
+            <label>Email</label><label style="color: red">&nbsp*</label>
+            <input type="email" class="inputText" style="left:2px; height:35px;margin-top: 5px;" id="inputEmail">
+        </p>
+
+        <p>
+            <input type="button" class="button" value="Submit" style="margin-left: 15.5em;" id="submitButton">
+        </p>
+
+    </div>
+    <script type="text/javascript">
+        document.getElementById("submitButton").addEventListener("click", validationFunction,false);
+        var din = document.getElementById("dateInput");
+        var tin = document.getElementById("timeInput");
+        var conin = document.getElementById("inputContact");
+        var emin = document.getElementById("inputEmail");
+        var em = document.getElementById("inputTimeZone");
+        function validationFunction() {
+            var indexTimeZone = em.options[em.selectedIndex].index;
+            if(!isDate(din.value))
+            {
+                din.className = 'invalidText pwd1';
+            }
+            else{
+                din.className = 'inputText pwd1';
+            }
+            if(!isTime(tin.value))
+            {
+                tin.className = 'invalidText pwd1 pwd2';
+            }
+            else{
+                tin.className = 'inputText pwd1 pwd2';
+            }
+            if(indexTimeZone > 0)
+            {
+                em.className = 'inputText';
+            }
+            else{
+                em.className = 'invalidText';
+            }
+            if(!isPhoneNumber(conin.value))
+            {
+                conin.className = 'invalidText';
+            }
+            else{
+                conin.className = 'inputText';
+            }
+            if(!isEmailAddress(emin.value))
+            {
+                emin.className = 'invalidText';
+            }
+            else{
+                emin.className = 'inputText';
+            }
+        }
+    </script>
+</div>
+</body>
+</html>

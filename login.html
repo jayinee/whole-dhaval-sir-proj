@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="homecss.css">
+    <link rel="stylesheet" href="commoncss.css">
+    <link href="login.css" rel="stylesheet" />
+    
+    <script type="text/javascript" src="validator.js" ></script>
+</head>
+<body>
+<div>
+    <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="index.html">Project 2</a></li>
+        <li><a href="aboutme.html">About</a></li>
+        <li><a href="calculator.html">Calculator</a></li>
+        <li><a href="shopping.html">Shopping</a></li>
+        <li class="dropdown">
+            <a href="#" class="dropbtn">Project 4</a>
+            <div class="dropdown-content">
+                <a href="signup.html">Sign Up</a>
+                <a href="search.html">Search</a>
+                <a href="questionnaire.html">Questionnaire</a>
+                <a href="login.html">Login</a>
+                <a href="colorbuilding.html">Color Building</a>
+                <a href="billing.html">Shipping</a>
+                <a href="scheduling.html">Schedule</a>
+                <a href="creditcard.html">Credit / Debit Card</a>
+            </div>
+        </li>
+        
+    </ul>
+</div>
+    <div class="box boxLocation">
+        <div class="upper"> Login</div>
+        <div class="lower">
+                <p>
+                    <input type="text" class="inputText userImage" placeholder="User Name or Email" autofocus id="inputUser">
+                    <input type="password" class="inputText passwordImage" placeholder="Password" id="inputPwd">
+                </p>
+            <p>
+                <input type="checkbox" class="checkbox" /> <label style="font-size: 15px;font-weight: 600;color: #000000">Remember me on this computer.</label>
+                <input type="button" class="button" value="Sign In" style="margin-left: 9px" id="submitButton">
+            </p>
+            <hr>
+            <p>
+                <a class="ancLink" href="#">Forgot Password?</a>
+                <a class="ancLink" href="#" style="margin-left: 1em">New User</a>
+            </p>
+        </div>
+        <script type="text/javascript">
+            document.getElementById("submitButton").addEventListener("click", validationFunction,false);
+            var inUser = document.getElementById("inputUser");
+            var inPwd = document.getElementById("inputPwd");
+            function validationFunction(){
+                if(!isEmpty(inUser.value)){
+                    inUser.className = "invalidText userImage";
+                }
+                else{
+                    inUser.className = "inputText userImage";
+                }
+                if(!isPassword(inPwd.value)){
+                    inPwd.className = "invalidText passwordImage";
+                }
+                else{
+                    inPwd.className = "inputText passwordImage";
+                }
+            }
+        </script>
+    </div>
+</body>
+</html>

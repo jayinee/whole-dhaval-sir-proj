@@ -1,0 +1,73 @@
+﻿
+           body {
+               background-color: #ffd1b3;
+               /*background: #B69470;/*#C0C0C0;*/
+               /*background: url("images/home.jpg") top right no-repeat white;*/
+           }
+           .box{
+               background-color:#EBE3CD;/*#EDF2F5;*/
+               border-radius: 10px;
+               position:relative;
+               -webkit-box-shadow: 0 0 10px #648796;
+               box-shadow: 0 0 10px #648796;
+
+           }
+
+        .boxLocation{
+            height:600px;
+            width:50%;
+            margin-top:4%;
+            left:30%;
+        }
+           .upper{
+               font-weight: 700;
+               color: black;
+               text-align: center;
+               vertical-align: middle;
+               line-height: 50px;
+               font-size:35px;
+               text-shadow: 2px 2px 8px #88898B;
+               background-color: #E6CB70 ;/*#4E7E8C;*/
+               border-radius: 10px;
+           }
+
+        .button {
+            width:15%;
+            height:60px;
+            border:none;
+            margin-left:2em;
+            cursor:pointer;
+            border-radius:4px;
+            font-size: 12px;
+            font-weight: 600;
+            color: white;
+            /*box-shadow: 0 6px 2px -2px gray;*/
+            margin-top: 10px;
+            background: #96B03D;
+            display: inline-block;
+            text-align: center;
+            vertical-align: middle;
+            line-height: 45px;
+        }
+        .button-sm{
+            font-size: 12px;
+            font-weight: 400;
+            color: white;
+            width:10%;
+            height:40px;
+            line-height: 17px;
+                  }
+        .button-lg{
+            width:20%;
+            height:80px;
+            line-height: 50px;
+            font-size: 20px;
+            font-weight: 800;
+        }
+
+        h3{
+            margin-left:3%;
+            color: black;
+        }
+
+   

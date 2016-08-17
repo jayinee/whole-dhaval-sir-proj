@@ -1,0 +1,31 @@
+﻿
+        .boxLocation{
+            height:340px;
+            width:400px;
+            margin-top:11%;
+            left:40%;
+        }
+        .checkbox{
+            margin-top: 25px;
+        }
+        .userImage{
+            background: url("images/user.png") top right no-repeat white;
+            height: 35px;
+        }
+        .passwordImage{
+            background: url("images/password.jpg") top right no-repeat white;
+            height: 35px;
+        }
+
+        .ancLink{
+            margin-top: 25px;
+            font-size: 15px;
+            font-weight: 600;
+            color: #000000;
+            padding-right:15%;
+            text-decoration: none;
+        }
+        .ancLink:hover{
+            color: blue;
+        }
+    
